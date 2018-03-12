@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import './products.css';
+import './shoppinglist.css';
 
-class Products extends Component {
-  constructor() {
-    super();
-    this.state = {
-      products: []
-    }
-  }
+class Shoppinglist extends Component {
+  addItem : function(item){
 
-  componentDidMount() {
-    fetch('/api/products')
-      .then(res => res.json())
-      .then(products => this.setState({products}, () => console.log('Products fetched..', products)));
-  }
+  },
 
   render() {
     return (
-      <div className="col-md-6">
+      <div>
         <table className="table table-striped">
           <thead>
             <tr>
@@ -36,7 +27,6 @@ class Products extends Component {
                 <td className="productPrice">
                   { products.productPrice }
                 </td>
-                <td><button></button></td>
               </tr>
             )}
           </tbody>
@@ -46,4 +36,4 @@ class Products extends Component {
   }
 }
 
-export default Products;
+export default Shoppinglist;
