@@ -16,6 +16,7 @@ class App extends Component {
       showShoppingList: !this.state.showShoppingList
     });
   }
+
   render() {
     return (
       <div className="App container col-12 col-md-11">
@@ -29,7 +30,7 @@ class App extends Component {
         </nav>
         <Products />
         {this.state.showShoppingList ?
-          <Shoppinglist text='Close' closeShoppingList={this.toggleShoppingList.bind(this)}/>
+          <Shoppinglist Shoppinglist={this.state.Shoppinglist} text='Close' closeShoppingList={this.toggleShoppingList.bind(this)}/>
           : null
         }
         <footer>
