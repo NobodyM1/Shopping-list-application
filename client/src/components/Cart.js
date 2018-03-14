@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './shoppinglist.css';
+import './Cart.css';
 
-class Shoppinglist extends Component {
+class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,8 +17,8 @@ class Shoppinglist extends Component {
 
   render() {
     return (
-      <div className="shoppingList">
-        <div className="shoppingListInner">
+      <div className="cart">
+        <div className="cartInner">
           <h3>This is shoppin list</h3>
           <button onClick={this.props.closeShoppingList}>Close</button>
           <button onClick={() => this.test()}></button>
@@ -30,4 +30,4 @@ class Shoppinglist extends Component {
     );
   }
 }
-export default Shoppinglist;
+export default Cart;
