@@ -3,12 +3,14 @@ import './Products.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {selectCartItem} from '../actions/index';
+import PopUp from '../containers/PopUp';
 
 class Products extends Component {
   constructor(){
     super();
     this.state = {
-      products: []
+      products: [],
+      showPopUp: false
     }
   }
 
@@ -16,6 +18,23 @@ class Products extends Component {
     fetch('/api/products')
     .then(results => results.json())
     .then(products => this.setState({products}, () => console.log('Products fetched..', products)));
+  }
+
+  doupleFunct(item){
+    this.props.selectCartItem(item);
+    this.togglePopUp();
+  }
+
+  /* Show message when new item is added to cart */
+  togglePopUp(){
+    setTimeout(() => {
+      this.setState({
+        showPopUp: !this.state.showPopUp
+      });
+    }, 2000);
+    this.setState({
+      showPopUp: !this.state.showPopUp
+    });
   }
 
   createListItems() {
@@ -26,7 +45,7 @@ class Products extends Component {
             <div className="productName">{item.name}</div>
             <div className="productImage d-flex align-items-center justify-content-center">item image</div>
             <div className="productPrice">{item.price} &#8362;</div>
-            <div><button className="btn btn-primary" onClick={() => this.props.selectCartItem(item)}>Add to cart</button></div>
+            <div><button className="btn btn-primary" onClick={() => this.doupleFunct(item)}>Add to cart</button></div>
           </div>
         </li>
       )
@@ -36,6 +55,10 @@ class Products extends Component {
   render(){
     return (
       <div className="d-flex productContainer">
+        {this.state.showPopUp ?
+          <PopUp PopUp={this.state.PopUp} text='Close' closePopUp={this.togglePopUp.bind(this)}/>
+          : null
+        }
         <ul className="productList list-group col-12 d-flex flex-row flex-wrap align-items-center justify-content-center">
           {this.createListItems()}
         </ul>

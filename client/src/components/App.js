@@ -26,6 +26,7 @@ class App extends Component {
       showCart: !this.state.showCart
     });
   }
+
   render(){
     return (
       <div className="App container col-12 col-md-11">

@@ -35,16 +35,30 @@ export default function (state = [], action) {
 
     /* Increases the quantity of selected product */
     case "INCRESE_QTY":
-      var objIndex = state.findIndex(item => item === action.payload);
-      state[objIndex].qty = state[objIndex].qty + 1;
-      return state;
+      let idx = state.findIndex(item => item === action.payload);
+      const newState = state.slice();
+
+      const oldItem = state[idx];
+      const newItem = {...oldItem};
+
+      newItem.qty++;
+      newState[idx] = newItem;
+
+      return newState;
 
     /* Decreases the quantity of selected product */
     case "DECRESE_QTY":
-      var objIndex = state.findIndex(item => item === action.payload);
-      if(state[objIndex].qty > 1){
-        state[objIndex].qty = state[objIndex].qty - 1;
-        return state;
+      idx = state.findIndex(item => item === action.payload);
+      if(state[idx].qty > 1){
+        const newState = state.slice();
+
+        const oldItem = state[idx];
+        const newItem = {...oldItem};
+
+        newItem.qty--;
+        newState[idx] = newItem;
+
+        return newState;
       }
       return state;
 
