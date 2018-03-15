@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 10px;
   min-width: 250px;
-  background: rgb(221, 221, 221);
+  background: rgba(221, 221, 221,.9);
   color: #007bff;
   padding: 10px;
   border-radius: 10px;

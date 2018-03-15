@@ -11,7 +11,7 @@ function containsObject(obj, array) {
   return false;
 }
 
-export default function (state = [], action) {
+export default function request(state = [], action) {
   switch (action.type) {
 
     /* Adds selected product as new item in cart */
@@ -20,6 +20,7 @@ export default function (state = [], action) {
     /* If product is already added to cart then increase the quantity selected product*/
     if(containsObject(action.payload, state) === true){
       var objIndex = state.findIndex(item => item === action.payload);
+      console.log(state[objIndex]);
       state[objIndex].qty = state[objIndex].qty + 1;
       return state;
     }

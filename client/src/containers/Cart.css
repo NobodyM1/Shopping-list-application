@@ -30,17 +30,17 @@
 }
 
 .cartItemTable{
-  width: 320px;
+  width: 280px;
 }
 
 .cartItemWidth th{
-  max-width: 75px;
-  min-width: 75px;
+  max-width: 50px;
+  min-width: 50px;
 }
 
 .cartItemWidth td{
-  max-width: 75px;
-  min-width: 75px;
+  max-width: 50px;
+  min-width: 50px;
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -55,7 +55,6 @@
 
 .qtyButton:hover{
   cursor: pointer;
-
 }
 
 .incButton{
