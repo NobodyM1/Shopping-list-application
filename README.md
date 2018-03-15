@@ -3,6 +3,9 @@ Shopping list application build using React, Redux and Express
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+Images used in the app are licensed under Creative Commons Zero (CC0) license.
+All images are from (https://www.pexels.com/).
+
 ## Setup and use
 
 First download repository
