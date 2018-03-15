@@ -8,6 +8,7 @@
   bottom: 0;
   margin: auto;
   background-color: rgba(0,0,0, 0.5);
+  z-index: 98;
 }
 
 .cartInner{
@@ -19,6 +20,7 @@
   box-shadow: 0 5px 15px rgba(0,0,0,.5), inset 0 -5px 20px rgba(0,0,0,.4);
   padding: 10px;
   border: none;
+  z-index: 99;
 }
 
 .cartInner button{
@@ -41,6 +43,7 @@
   min-width: 75px;
   padding: 0;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .qtyButton{

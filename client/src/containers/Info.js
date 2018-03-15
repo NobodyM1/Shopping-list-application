@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Info.css';
 
+/* Information about how to use app */
 class Products extends Component {
   render(){
     return (

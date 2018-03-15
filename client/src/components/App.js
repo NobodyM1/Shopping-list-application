@@ -31,11 +31,11 @@ class App extends Component {
     return (
       <div className="App container col-12 col-md-11">
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-          <a href="#" className="navbar-brand"><i className="fas fa-bold"></i><i className="fas fa-info"></i><i className="fab fa-tumblr"></i></a>
+          <a className="navbar-brand"><i className="fas fa-bold"></i><i className="fas fa-info"></i><i className="fab fa-tumblr"></i></a>
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
-            <li className="nav-item"><a className="nav-link" href="#" onClick={this.toggleCart.bind(this)}>Cart</a></li>
-            <li className="nav-item"><a className="nav-link" href="#" onClick={this.toggleInfo.bind(this)}>Info</a></li>
+            <li className="nav-item"><a className="nav-link" >Home</a></li>
+            <li className="nav-item"><a className="nav-link"  onClick={this.toggleCart.bind(this)}>Cart</a></li>
+            <li className="nav-item"><a className="nav-link"  onClick={this.toggleInfo.bind(this)}>Info</a></li>
           </ul>
         </nav>
         <Products />

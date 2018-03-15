@@ -42,10 +42,13 @@ class Products extends Component {
       return (
         <li key={item.id} className="list-group-item listItem test">
           <div  className="listItemFrame d-flex flex-column align-items-center">
+            <div className="productImageFrame d-flex align-items-center justify-content-center">
+              <button className="btn btn-basic productButton" onClick={() => this.doupleFunct(item)}>Add to cart</button>
+              <img src={item.productImage} className="productImage"></img>
+            </div>
             <div className="productName">{item.name}</div>
-            <div className="productImage d-flex align-items-center justify-content-center">item image</div>
             <div className="productPrice">{item.price} &#8362;</div>
-            <div><button className="btn btn-primary" onClick={() => this.doupleFunct(item)}>Add to cart</button></div>
+            <div></div>
           </div>
         </li>
       )

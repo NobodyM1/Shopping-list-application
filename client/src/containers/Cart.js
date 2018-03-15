@@ -6,8 +6,10 @@ import {removeCartItem} from '../actions/index';
 import {increaseQty} from '../actions/index';
 import {decreaseQty} from '../actions/index';
 
+/* Renders shopping cart */
 class Cart extends Component {
 
+/* Creates tabel row from every product sent to cart */
   renderList(){
     return this.props.cartItems.map((item) => {
       return (
@@ -28,7 +30,6 @@ class Cart extends Component {
   }
 
   render(){
-    console.log(this.props.cartItems);
     return (
       <div className="cart d-flex justify-content-center align-items-center">
         <div className="cartInner d-flex flex-column text-center align-items-center">
