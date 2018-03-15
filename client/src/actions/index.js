@@ -1,5 +1,5 @@
 
-
+/* Add new cart item */
 export const selectCartItem = (item) => {
   return {
     type: "CARTITEM_SELECTED",
@@ -7,6 +7,7 @@ export const selectCartItem = (item) => {
   }
 };
 
+/* Remove selected cart item */
 export const removeCartItem = (item) => {
   return {
     type: "REMOVE_CARTITEM",
@@ -14,6 +15,7 @@ export const removeCartItem = (item) => {
   }
 };
 
+/* Increase quantity of selected item */
 export const increaseQty = (item) => {
   return {
     type: "INCRESE_QTY",
@@ -21,6 +23,7 @@ export const increaseQty = (item) => {
   }
 };
 
+/* Decrease quantity of selected item */
 export const decreaseQty = (item) => {
   return {
     type: "DECRESE_QTY",

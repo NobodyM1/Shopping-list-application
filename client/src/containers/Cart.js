@@ -19,8 +19,6 @@ class Cart extends Component {
     return false;
   }
 
-
-
   renderList(){
     return this.props.cartItems.map((item) => {
       return (
@@ -44,7 +42,7 @@ class Cart extends Component {
       <div className="cart d-flex justify-content-center align-items-center">
         <div className="cartInner d-flex flex-column text-center align-items-center">
           <h3>Your cart</h3>
-          <button className="btn btn-danger" onClick={this.props.closeShoppingList}>Close</button>
+          <button className="btn btn-danger" onClick={this.props.closeCart}>Close</button>
           <table className="table table-striped">
             <thead>
               <tr>

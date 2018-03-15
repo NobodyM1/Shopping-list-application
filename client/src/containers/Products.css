@@ -4,33 +4,40 @@ img{
   height: 100px;
 }
 
-.content{
-  height: 100%;
-  padding: 0;
+.productContainer{
+  background: transparent;
 }
 
-.flex-row{
-  display: flex;
-  flex-direction: row;
-}
-
-.form-group{
-}
-
-.productList {
-  list-style: none;
-  height: 85vh;
-  padding: 0;
+.productList{
+  background: transparent;
 }
 
 .listItem{
   height: 40vh;
   border-style: none;
   width: 280px;
+  background: transparent;
 }
 
 .listItemFrame{
   border:  1px solid #777;
   height: 100%;
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.5);
+  background: rgb(238, 236, 234);
+  border-style: none;
+}
+
+.productName{
+  height: 20%;
+}
+
+.productImage{
+  width: 80%;
+  height: 50%;
+}
+
+.productPrice{
+  height: 10%;
 }

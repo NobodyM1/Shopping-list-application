@@ -21,9 +21,12 @@ class Products extends Component {
   createListItems() {
     return this.state.products.map((item) => {
       return (
-        <li key={item.id} className="list-group-item listItem" onClick={() => this.props.selectCartItem(item)}>
+        <li key={item.id} className="list-group-item listItem test">
           <div  className="listItemFrame d-flex flex-column align-items-center">
-            {item.name} {item.price}
+            <div className="productName">{item.name}</div>
+            <div className="productImage d-flex align-items-center justify-content-center">item image</div>
+            <div className="productPrice">{item.price} &#8362;</div>
+            <div><button className="btn btn-primary" onClick={() => this.props.selectCartItem(item)}>Add to cart</button></div>
           </div>
         </li>
       )
@@ -32,7 +35,7 @@ class Products extends Component {
 
   render(){
     return (
-      <div className="d-flex">
+      <div className="d-flex productContainer">
         <ul className="productList list-group col-12 d-flex flex-row flex-wrap align-items-center justify-content-center">
           {this.createListItems()}
         </ul>
