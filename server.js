@@ -1,9 +1,8 @@
-/* Building express server */
+
 const express = require('express');
 
 const app = express();
 
-/* Here we create json data including product information */
 app.get('/api/products', (req, res) => {
   const products = [
     {id: 1, name: 'Brown jacket', price: '150',  productImage: "https:\/\/images.pexels.com\/photos\/887898\/pexels-photo-887898.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"},
@@ -17,7 +16,7 @@ app.get('/api/products', (req, res) => {
   res.json(products);
 });
 
-/* Defining port where server will run */
+
 const port = 5000;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

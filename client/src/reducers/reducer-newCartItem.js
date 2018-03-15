@@ -20,7 +20,6 @@ export default function request(state = [], action) {
     /* If product is already added to cart then increase the quantity selected product*/
     if(containsObject(action.payload, state) === true){
       var objIndex = state.findIndex(item => item === action.payload);
-      console.log(state[objIndex]);
       state[objIndex].qty = state[objIndex].qty + 1;
       return state;
     }
