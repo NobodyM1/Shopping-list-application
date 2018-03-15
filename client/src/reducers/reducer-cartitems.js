@@ -1,4 +1,3 @@
-
 /* Adding cartItems to store */
 
 export default function(){

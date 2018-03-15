@@ -1,0 +1,36 @@
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.content{
+  height: 100%;
+  padding: 0;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group{
+}
+
+.productList {
+  list-style: none;
+  height: 85vh;
+  padding: 0;
+}
+
+.listItem{
+  height: 40vh;
+  border-style: none;
+  width: 280px;
+}
+
+.listItemFrame{
+  border:  1px solid #777;
+  height: 100%;
+  padding: 10px;
+}
